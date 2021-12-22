@@ -1,0 +1,23 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "samplecypressautomation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headchromeTest": "npm run test -- --headed --browser chrome",
+    "recordToDashboard": "npm run headchromeTest -- --record --key cd886bee-71d3-4204-bf89-bc20a9a1fd24",
+    "htmlReport": "npm run headchromeTest -- --reporter mochawesome",
+    "spec": "npm run headchromeTest -- --spec \"cypress/integration/Practice/angularApplication/framework.spec.js\"  ",
+    "multipleSpec": "npm run headchromeTest -- --spec \"cypress/integration/Practice/angularApplication/*\" "
+  },
+  
+  "author": "umamaheswari kaliyaperumal",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.7.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^6.2.2"
+  }
+}
