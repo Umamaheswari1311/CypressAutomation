@@ -1,5 +1,5 @@
 {
-  "reporter":"mochawesome",
+  
   "defaultCommandTimeout": 6000,
   "pageLoadTimeout": 60000,
  "env": {
@@ -9,5 +9,16 @@
     "runMode":1,
     "openMode":1
   },
-  "projectId": "wnemdd"
+  "projectId": "wnemdd",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  }
 }
